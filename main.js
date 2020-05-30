@@ -26,7 +26,7 @@ module.exports.loop = function () {
 
   var upgraders = _.filter(Game.creeps, (creep) => creep.memory.role == 'upgrader');
 
-  if (upgraders.length < 2) {
+  if (upgraders.length < 3) {
     var newName = 'Upgraders' + Game.time;
     console.log('Spawning new Upgraders: ' + newName);
     Game.spawns['Spawn1'].spawnCreep([WORK, WORK, CARRY, MOVE, MOVE], newName, {
@@ -38,7 +38,7 @@ module.exports.loop = function () {
 
   // 如果有工地那就维持，没有工地就不维持了
   if (Object.keys(Game.constructionSites).length > 0) {
-    if (builders.length < 3) {
+    if (builders.length < 2) {
       var newName = 'builder' + Game.time;
       console.log('Spawning new builders: ' + newName);
       Game.spawns['Spawn1'].spawnCreep([WORK, WORK, CARRY, MOVE, MOVE], newName, { memory: { role: 'builder' } });

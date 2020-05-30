@@ -29,7 +29,7 @@ var rolBuilder = {
         filter: (structure) => {
           return (
             (structure.structureType == STRUCTURE_EXTENSION || structure.structureType == STRUCTURE_SPAWN) &&
-            structure.store.getUsedCapacity(RESOURCE_ENERGY) > 100
+            structure.store.getUsedCapacity(RESOURCE_ENERGY) > 200
           );
         },
       });

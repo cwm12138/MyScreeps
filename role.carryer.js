@@ -5,7 +5,16 @@ var roleCarryer = {
       //   creep.moveTo(i);
       // }
       //;
-      const target = i.pos.findClosestByRange(FIND_DROPPED_RESOURCES);
+      // const target = i.pos.findClosestByRange(FIND_DROPPED_RESOURCES);
+      // if (target) {
+      //   if (creep.pickup(target) == ERR_NOT_IN_RANGE) {
+      //     creep.moveTo(target);
+      //   }
+      // } else {
+      //   creep.moveTo(i);
+      // }
+
+      const target = creep.pos.findClosestByRange(FIND_DROPPED_RESOURCES);
       if (target) {
         if (creep.pickup(target) == ERR_NOT_IN_RANGE) {
           creep.moveTo(target);
